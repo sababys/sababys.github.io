@@ -19,12 +19,9 @@
         </label>
 
         <div class="trigger">
-          {% for path in page_paths %}
-            {% assign my_page = site.pages | where: "path", path | first %}
-            {% if my_page.title %}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {% endif %}
-          {% endfor %}
+          <a href="#about"  class="page-link" title="À propos de moi">À propos</a>
+          <a href="#skills" class="page-link" title="Mes compétences">Compétences</a>
+          <a href="#works"  class="page-link" title="Mes réalisations">Réalisations</a>
         </div>
       </nav>
     {% endif %}

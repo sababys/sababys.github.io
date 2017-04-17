@@ -1,0 +1,30 @@
+<h2 class="title-secondary">Réalisations</h2>
+<section class="section-portfolio" id="works">
+    {% for post in site.posts %}
+    <article class="block-primary clearfix">
+        <div class="block-primary__info {{post.infoExtraClass}}">
+            <h2 class="block-primary__title classTest1">{{post.title}}</h2>
+            <div class="block-primary__wysiwyg">
+                {{post.description}}
+            </div>
+        </div>
+        <div class="block-primary__preview-wrapper">
+          <div class="block-primary__preview-desktop">
+              <div class="desktop-bar">
+                <div class="desktop-bar__action-wrapper">
+                   <span class="desktop-bar__action-item"></span>
+                 </div><!--
+                 --><div class="desktop-bar__url-bar">
+                   <a href="{{post.anchor_url}}" title="{{anchor_title}}" target="blank" class="desktop-bar__url-anchor">{{post.anchor_link}}</a>
+                 </div>
+              </div>
+              <div class="block-primary__preview-desktop-image-wrapper">
+                <a href="{{post.anchor_url}}" title="{{anchor_title}}" target="blank">
+                  <img src="/assets/img/{{post.path_image_desktop}}" alt="{{post.alt_image}}">
+                </a>
+              </div>
+          </div>
+        </div>
+    </article>
+    {% endfor %}
+</section>
