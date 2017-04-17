@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: À propos
+permalink: /a-propos/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+<h2 class="title-secondary">Ce que je suis</h2>
+<div class="wysiwyg">Autonome dans mon travail, passionnée par mon domaine, curieuse des nouvelles technos, persévérante dans mon apprentissage, joueuse d’équipe, fan des frères Coen, féru de blues de folk et de jazz, je suis tout ça et bien plus encore.</div>
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+<h2 class="title-secondary">Ce que je fais</h2>
+<div class="wysiwyg">Intégration web : découpe et intégration de maquettes HTML, expertise CSS, responsive web design; Respect des standards, forte sensibilité à la qualité web et à son accessibilité; Etre toujours en apprentissage. C’est l’apanage de ce métier!</div>
+
+<h2 class="title-secondary">Mon parcours</h2>
+<div class="wysiwyg">Cinq années dans le commerce, avant de reprendre une année d’étude pré-universitaire, puis une formation en maintenance informatique. Première expérience de travail au Canada comme technologue en cartographie. Nouveau retour aux études, je découvre enfin mon nouvel univers.</div>

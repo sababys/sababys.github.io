@@ -1,0 +1,19 @@
+---
+layout: post
+date:   2017-04-08 08:47:20 -0400
+categories:
+
+title:  "Zoom.ca"
+description: "Premier site de vente en ligne de véhicules d'occasion au Canada.
+Site responsive."
+
+path_image_desktop: preview-zoom-desktop.jpg
+path_image_mobile: preview-zoom-mobile.jpg
+alt_image: zoom.ca
+
+anchor_link: www.zoom.ca
+anchor_url: https://www.zoom.ca/en/
+anchor_title: zoom.ca, membre du groupe Performance autogroup
+
+comments: Utilisation du framework Foundation avec des classes sémantiques suivant la convention de nommage BEM.
+---

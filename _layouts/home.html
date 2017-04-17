@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Réalisations</h1>
+
+  {{ content }}
+  <section class="section-portfolio" id="realisations">
+      {% for post in site.posts %}
+      <article class="block-primary clearfix">
+          <div class="block-primary__info {{post.infoExtraClass}}">
+              <h2 class="block-primary__title">{{post.title}}</h2>
+              <div class="block-primary__wysiwyg">
+                  {{post.description}}
+              </div>
+          </div>
+      </article>
+      {% endfor %}
+  </section>
+</div>

@@ -1,0 +1,17 @@
+---
+layout: post
+date:   2017-02-08 08:47:20 -0400
+categories:
+
+title:  "Hamel Honda"
+description: ""
+
+path_image_desktop: preview-hamel-desktop.jpg
+alt_image: hamelhonda
+
+anchor_link: www.hamelhonda.ca
+anchor_url: http://www.hamelhonda.com/fr
+anchor_title: hamelhonda
+
+comments:
+---

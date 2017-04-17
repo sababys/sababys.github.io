@@ -1,0 +1,18 @@
+---
+layout: post
+date:   2017-03-08 08:47:20 -0400
+categories: 
+
+title:  "Beaucage"
+description: "23 sites sur un même thème."
+
+path_image_desktop: preview-beaucage-desktop.jpg
+alt_image: beaucage.ca
+
+anchor_link: www.mazdadesherbrooke.com
+anchor_title: Mazda Sherbrooke, membre du groupe Beaucage.
+anchor_url: http://www.mazdadesherbrooke.com/fr
+
+previewExtraClass: block-primary__preview-desktop--even
+infoExtraClass: block-primary__info--even
+---
