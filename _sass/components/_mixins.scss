@@ -1,0 +1,218 @@
+// ----------------------------------------------------------------------
+
+// Mixins file
+
+// ----------------------------------------------------------------------
+
+@mixin box-shadow( $shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false, $shadow6:false, $shadow7:false, $shadow8:false, $shadow9:false ) {
+  $params: $shadow1;
+  @if $shadow2 { $params: $shadow1, $shadow2; }
+  @if $shadow3 != false { $params: $shadow1, $shadow2, $shadow3; }
+  @if $shadow4 != false { $params: $shadow1, $shadow2, $shadow3, $shadow4; }
+  @if $shadow5 != false { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5; }
+  @if $shadow6 != false { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6; }
+  @if $shadow7 != false { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6, $shadow7}
+  @if $shadow8 != false { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6, $shadow7, $shadow8 }
+  @if $shadow9 != false { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6, $shadow7, $shadow8, $shadow9 }
+
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
+
+
+@mixin default-box-shadow {
+
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow:    0px 2px 4px 0px rgba(0, 0, 0, 0.28);
+  box-shadow:         0px 2px 4px 0px rgba(0, 0, 0, 0.28);
+}
+
+// Border radius shorthand
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin inline-block {
+  display: -moz-inline-stack;	// ff 2
+  display: inline-block;
+  zoom:1; *display: inline; _height: 15px; // ie 6-7
+}
+
+// Padding shorthand version
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+// Padding longhand version
+@mixin padding-all($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+// Margin shorthand version
+@mixin margin($margin) {
+  margin: $margin;
+}
+
+// Margin longhand version
+@mixin margin-all($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
+
+@mixin box-sizing($box-model:null) {
+  @if ($box-model == null) {
+    $box-model : border-box;
+  }
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+@mixin button-base {
+  @include disable-mouse-outline;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  border-radius: $button-radius;
+}
+
+@mixin animation($animation){
+  animation: $animation;
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+
+}
+
+@mixin transition($transtion){
+  transition: $transtion;
+  -webkit-transition: $transtion;
+  -moz-transition: $transtion;
+  -o-transition: $transtion;
+
+}
+
+@mixin transform($transform){
+  transform: $transform;
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+}
+
+@mixin arrow-right($border-width,$border-height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $border-height/2 0 $border-height/2 $border-width;
+  border-color: transparent transparent transparent $color;
+}
+
+@mixin arrow-left($border-width,$border-height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $border-height/2 $border-width $border-height/2 0;
+  border-color: transparent  $color transparent transparent;
+}
+
+@mixin arrow-top($border-width,$border-height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $border-width/2 $border-height $border-width/2;
+  border-color: transparent transparent $color transparent;
+}
+
+@mixin arrow-bottom($border-width,$border-height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $border-height $border-width/2 0 $border-width/2;
+  border-color: $color transparent transparent transparent;
+}
+
+/// Vertically centers the element inside of its first non-static parent,
+/// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/// Horizontally centers the element inside of its first non-static parent,
+/// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/// Absolutely centers the element inside of its first non-static parent,
+/// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

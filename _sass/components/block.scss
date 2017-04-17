@@ -1,0 +1,15 @@
+.block-primary{
+    text-align:center;
+  margin-bottom: $spacing-unit;
+    &__info{
+      padding:$spacing-unit / 2 0;
+    }
+
+    &__title{
+      font:700 28px/42px $base-font-family;
+    }
+
+    &__wysiwyg{
+
+    }
+}

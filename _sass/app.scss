@@ -1,10 +1,11 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: "Montserrat", sans-serif !default;
 $base-font-size:   16px !default;
-$base-font-weight: 400 !default;
+$base-font-weight: 300 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
@@ -23,6 +24,12 @@ $content-width:    800px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
+
+$small:             0 !default;
+$medium:        720px !default;
+$large:        1024px !default;
+$xlarge:        1200px !default;
+$xxlarge:        1450px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -43,7 +50,10 @@ $on-laptop:        800px !default;
 
 // Import partials.
 @import
-  "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "components/reset",
+  "components/mixins",
+  "components/base",
+  "components/block",
+  "components/layouts"
 ;
