@@ -1,15 +1,78 @@
 .block-primary{
     text-align:center;
-  margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit;
+    @extend %clearfix;
+
     &__info{
       padding:$spacing-unit / 2 0;
+    }
+
+    &__preview-desktop-image-wrapper{
+        border:1px solid $grey-color-light;
+        border-top:0;
     }
 
     &__title{
       font:700 28px/42px $base-font-family;
     }
+  }
 
-    &__wysiwyg{
+.desktop-bar{
+  @include border-radius(4px 4px 0 0);
+  border:1px solid $grey-color-light;
 
+  &__action-wrapper{
+    @include inline-block;
+    width:10%;
+    @include box-sizing(border-box);
+    padding-left:calculateRem(12px);
+    text-align:left;
+  }
+
+  &__action-item{
+    @include inline-block;
+    position:relative;
+    width:4px;
+    height:4px;
+    @include border-radius(50%);
+    background-color: $grey-color;
+
+    &:before,&:after {
+      content:'';
+      position:absolute;
+      @include inline-block;
+      width:4px;
+      height:4px;
+      @include border-radius(50%);
+      background-color: $grey-color;
     }
+
+    &::before{
+      left:-8px;
+    }
+    &:after{
+      right:-8px;
+    }
+  }
+
+  &__url-anchor{
+    @include inline-block;
+    width:100%;
+    @include box-sizing(border-box);
+    border:1px solid  $grey-color-light;
+    @include padding(0 10px 3px);
+
+    @include font-size(12px) ;
+    @include line-height(12px) ;
+    text-align:left;
+
+    color: $grey-color-light;
+  }
+
+  &__url-bar{
+    @include inline-block;
+    width:90%;
+    @include box-sizing(border-box);
+    @include padding(0 6px 6px 6px);
+  }
 }

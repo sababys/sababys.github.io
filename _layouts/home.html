@@ -16,9 +16,21 @@ layout: default
                   {{post.description}}
               </div>
           </div>
-          <div class="block-primary__preview">
-            <img src="assets/img/{{post.path_image_desktop}}" alt="Jekyll logo" />
+          <div class="block-primary__preview-wrapper">
+            <div class="block-primary__preview-desktop">
+                <div class="desktop-bar">
+                  <div class="desktop-bar__action-wrapper">
+                     <span class="desktop-bar__action-item"></span>
+                   </div><!--
+                   --><div class="desktop-bar__url-bar">
+                     <a href="{{post.anchor_url}}" class="desktop-bar__url-anchor">{{post.anchor_link}}</a>
+                   </div>
+                </div>
+                <div class="block-primary__preview-desktop-image-wrapper">
+                    <img src="/assets/img/{{post.path_image_desktop}}" alt="{{post.alt_image}}">
+                </div>
             </div>
+          </div>
       </article>
       {% endfor %}
   </section>

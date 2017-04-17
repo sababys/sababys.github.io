@@ -1,3 +1,19 @@
+/**
+ * Wrapper
+ */
+.page-wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+}
+.page-content{
+  padding: $spacing-unit 0;
+}
+
 .title-primary{
     font:800 30px/42px $base-font-family;
 }
@@ -11,3 +27,19 @@
 .section-portfolio{
   padding:$spacing-unit 0;
 }
+
+
+
+/**
+ * Media Queries
+ */
+
+ @include media-query($large) {
+   .page-wrapper{
+     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+     padding-right: $spacing-unit / 2;
+     padding-left: $spacing-unit / 2;
+   }
+
+ }
