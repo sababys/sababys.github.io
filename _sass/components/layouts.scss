@@ -32,9 +32,24 @@
   letter-spacing: .1rem;
 }
 
+.homepage-link{
+  margin: 30px 0;
+  text-align: center;
+}
+.link-regular{
+  text-decoration: underline;
+
+  &:hover,&:focus,&:active{
+    text-decoration: none;
+  }
+}
+
 .wysiwyg{
+  box-sizing: border-box;
+  margin-bottom:calculateRem(30px);
+
   font:300 16px/28px $base-font-family;
-  margin-bottom: $spacing-unit;
+  vertical-align: top;
 }
 
 .date{
@@ -48,6 +63,39 @@
     background: -webkit-linear-gradient(top, #ffffff 0%,#ededed 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #ffffff 0%,#ededed 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+@media (min-width: $small){
+
+}
+@media (min-width: $medium){
+
+}
+
+@media (min-width: $large){
+  .section-about{
+    .wysiwyg{
+      @include inline-block;
+      width:33%;
+      padding-right:calculateRem(30px);
+
+      &--last{
+        padding-right: 0;
+      }
+    }
+  }
+
+  .section-skills{
+    .wysiwyg{
+      @include inline-block;
+      width:50%;
+      padding-right:calculateRem(30px);
+
+      &--last{
+        padding-right: 0;
+      }
+    }
+  }
 }
 
 /**

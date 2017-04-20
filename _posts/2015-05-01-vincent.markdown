@@ -1,0 +1,17 @@
+---
+layout: post
+date:   2016-02-01 00:00:00 -0000
+categories:
+
+title:  "Groupe Vincent"
+description: "Mon premier thème custom"
+
+path_image_desktop: preview-avantagehonda-desktop.jpg
+alt_image: vincent
+
+anchor_link: www.avantagehonda.com/fr
+anchor_url: http://www.avantagehonda.com/fr
+anchor_title: avantagehonda
+
+comments:
+---

@@ -5,12 +5,12 @@
       {% for post in site.posts %}
       <article class="block-primary clearfix">
           <div class="block-primary__info {{post.infoExtraClass}}">
-              <h2 class="block-primary__title classTest1">{{post.title}}</h2>
+              <h2 class="block-primary__title">{{post.title}}</h2>
               <div class="block-primary__wysiwyg">
                   {{post.description}}
               </div>
-          </div>
-          <div class="block-primary__preview-wrapper">
+          </div><!--
+          --><div class="block-primary__preview-wrapper">
             <div class="block-primary__preview-desktop">
                 <div class="desktop-bar">
                   <div class="desktop-bar__action-wrapper">
