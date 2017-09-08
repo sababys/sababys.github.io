@@ -6,10 +6,10 @@
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding: $spacing-unit/2 $spacing-unit;
+  padding: 60px $spacing-unit ;
   @extend %clearfix;
-
 }
+
 .page-content{
   padding: $spacing-unit 0;
 }
@@ -27,14 +27,27 @@
 }
 
 .title-tertiary{
-  font:800 14px/24px $base-font-family;
+  @include font-size(18px);
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .1rem;
+
+  &--small{
+    @include font-size(10px);
+  }
+}
+
+.title-quaternary{
+  @include font-size(12px);
+  font-weight: 800;
 }
 
 .homepage-link{
   margin: 30px 0;
   text-align: center;
+}
+.homepage-tagline{
+  font-style: italic;
 }
 .link-regular{
   text-decoration: underline;
@@ -48,35 +61,51 @@
   box-sizing: border-box;
   margin-bottom:calculateRem(30px);
 
-  font:300 16px/28px $base-font-family;
   vertical-align: top;
 }
 
 .date{
   display:block;
+  @include font-size(14px);
   font-style: italic;
 }
 
-.homepage-section {
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffffff 0%, #ededed 50%, #ffffff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffffff 0%,#ededed 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffffff 0%,#ededed 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+.section-competence{
+  background-color: $primary-color;
 }
+.section-experience{
+  background-color: $secondary-color;
+
+  &-list {
+    padding-left:18px;
+
+    li{
+      list-style: disc;
+    }
+  }
+}
+
+.section-formation{
+  background-color: $tertiary-color;
+}
+.section-realisation{
+  background-color: $quaternary-color;
+}
+
 
 @media (min-width: $small){
 
 }
 @media (min-width: $medium){
-
 }
 
 @media (min-width: $large){
+
   .section-about{
     .wysiwyg{
       @include inline-block;
-      width:33%;
+      font-style: italic;
+    //  width:33%;
       padding-right:calculateRem(30px);
 
       &--last{
@@ -85,7 +114,7 @@
     }
   }
 
-  .section-skills{
+  .section-competence{
     .wysiwyg{
       @include inline-block;
       width:50%;
@@ -97,6 +126,7 @@
     }
   }
 }
+
 
 /**
  * Media Queries

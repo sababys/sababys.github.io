@@ -1,14 +1,22 @@
 @charset "utf-8";
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,500,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Lato|Open+Sans:100,300,400,500,600,700,900);
 // Define defaults for each variable.
 
-$base-font-family: "Lato", sans-serif !default;
-$base-font-size:   16px !default;
+$base-font-family: 'Open Sans', sans-serif !default;
+$base-font-size:   14px !default;
 $base-font-weight: 300 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 2.2 !default;
 
 $spacing-unit:     10px !default;
+
+
+$white-color:      #fff !default;
+$black-color:      #111 !default;
+$primary-color:    #c0dfd9 !default;
+$secondary-color:    #e9ece5 !default;
+$tertiary-color:    #b3c2bf !default;
+$quaternary-color:    #3b3a36 !default;
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
@@ -18,13 +26,12 @@ $grey-color:       #6d6e71 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
-$white-color:      #fff !default;
-$black-color:      #111 !default;
-$primary-color:    #f5811f !default;
+$menu-hover:  darken($black-color, 25%) !default;
+
 
 
 // Width of the content area
-$content-width:    960px !default;
+$content-width:    1200px !default;
 
 $small:              0  !default;
 $medium:          720px !default;

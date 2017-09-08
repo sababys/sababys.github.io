@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Sabrina Lecourt, développeur Front | Porfolio
+title: Sabrina Lecourt, développeur Front End| Porfolio
 email: sabrina.lecourt@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Sabrina Lecourt, développeur Front End à Montréal et sur la rive nord.
@@ -22,6 +22,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://sabrinalecourt.ca" # the base hostname & protocol for your site
 twitter_username:
 github_username:  sababys
+
+# Custom Variables
+logoTitle: Sabrina Lecourt
+menu1: Compétences
+menu2: Expérience
+menu3: Formation
+menu4: Réalisations
 
 # Build settings
 markdown: kramdown
