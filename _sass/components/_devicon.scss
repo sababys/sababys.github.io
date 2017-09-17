@@ -410,6 +410,11 @@
 .devicon-codeigniter-plain:before {
 	content: "\e668";
 }
+.devicon-intellij-plain:before {
+  content: "\e933";
+  color:#136ba2;
+  margin-left: 45px;
+}
 
 .devicon-coffeescript-original-wordmark:before,
 .devicon-coffeescript-plain-wordmark:before {
@@ -598,6 +603,26 @@
 
 .devicon-mysql-plain-wordmark:before {
 	content: "\eb60";
+}
+
+.devicon-slack-plain-wordmark:before {
+  content: "\e924";
+  color:#583753;
+}
+
+.devicon-tomcat-line-wordmark:before {
+  content: "\e92c";
+  color:#d1a41a;
+}
+
+.devicon-tomcat-line:before {
+  content: "\e92d";
+  color:#d1a41a;
+}
+
+.devicon-slack-plain:before {
+  content: "\e925";
+  color:#583753;
 }
 
 .devicon-mysql-plain:before {
@@ -881,7 +906,7 @@
 .devicon-atom-original-wordmark.colored,
 .devicon-atom-plain.colored,
 .devicon-atom-plain-wordmark.colored {
-	color: #67595D;
+	color: #3b9b6d;
 }
 .devicon-babel-original.colored,
 .devicon-babel-plain.colored {
@@ -1093,6 +1118,10 @@
 .devicon-mysql-plain.colored,
 .devicon-mysql-plain-wordmark.colored {
 	color: #00618a;
+  @include font-size(70px);
+
+  position: absolute;
+  top:-16px;
 }
 .devicon-nginx-original.colored,
 .devicon-nginx-original-wordmark.colored,
@@ -1221,4 +1250,10 @@
 .devicon-zend-plain-wordmark.colored,
 .devicon-zend-plain.colored {
 	color: #68b604;
+}
+
+.devicon-jsp{
+  width:26px;
+  position: absolute;
+  top:0;
 }
